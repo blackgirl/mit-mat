@@ -1,0 +1,45 @@
+body, html {
+	height: 100%;
+    background: #8580c9;
+    overflow-y: auto;
+}
+
+.page-list {
+  background: #8580c9;
+  padding: 30px 0;
+}
+.list-item {
+	border-bottom: 2px solid rgba(133, 128, 201,.7);
+	background: rgba(255,255,255,.25);
+}
+.list-item .glyphicon {
+	font-size: 22px;
+	color: rgba(255,255,255,.7);
+}
+.list-item-info {
+	
+}
+.list-item-img {
+
+}
+.list-item-text a {
+	padding: 18px 0;
+}
+.list-item-text {
+  padding-right:30px;
+  padding-top:30px;
+  padding-left:0px;
+}
+.list-item-info p {
+	color: black;
+	margin: 0;
+	font-size: 18px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.list-item-info .title {
+	color: white;
+	font-size: 22px;
+	line-height: 1.6;
+}
