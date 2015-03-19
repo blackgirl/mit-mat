@@ -142,7 +142,6 @@ hr {
 
 #Mainpage footer {
   margin-top:0px;
-  padding-top:40px;
   background:#f9f9f9;
 }
 
@@ -323,6 +322,7 @@ img.brand:hover  {
 
 .mainpage-menu {
   font-size: 22px;
+  padding-bottom: 40px;
 }
 .mainpage-menu .col-md-1 {
   background: rgba(0,0,0,0.3);
@@ -385,7 +385,7 @@ img.brand:hover  {
 footer {
     background: none;
 }
-.f-nav button {
+.f-nav .btn {
   color: white;
   background: black;
 }
