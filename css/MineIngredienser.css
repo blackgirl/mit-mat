@@ -1,0 +1,52 @@
+#MineIngretizer {
+
+}
+.mine-ingretizer {
+	margin: 60px 0;
+}
+.delete-btn {
+	text-align: center;
+}
+.delete-btn .btn {
+	display:inline-block;
+	background: rgba(255,255,255,.25);
+	color: white;
+	border-radius: 0;
+	border: none;
+	padding-top: 15px;
+	font-size: 18px;
+	padding-bottom: 15px;
+}
+
+.delete-btn .btn:hover {
+	background: rgba(255,255,255,.5);
+}
+
+.items {
+	margin-top: 30px;
+}
+.items .item {
+	background: rgba(255,255,255,.25);
+	color:white;
+	margin-bottom: 1px;
+	font-family: 'HelveticaNeue Medium';
+	cursor: pointer;
+	padding-right:30px;
+}
+.items .item:hover {
+	background: rgba(255,255,255,.5);
+}
+.items .item-name {
+	font-size: 18px;
+	padding: 15px;
+}
+.item-delete-btn {
+	display:none;
+	padding: 15px 30px;
+	line-height: 1.6;
+	font-size: 18px;
+	background: red;
+}
+.items .item:hover .item-delete-btn {
+	display: inline-block;
+}
