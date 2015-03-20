@@ -352,7 +352,7 @@ img.brand:hover  {
   font-size: 22px;
   padding-bottom: 40px;
 }
-.mainpage-menu .col-md-1 {
+.mainpage-menu .col-md-12 {
   background: rgba(0,0,0,0.3);
   border-bottom: 1px solid #ccc;
   padding: 15px;
@@ -360,7 +360,7 @@ img.brand:hover  {
   padding-right: 30px;
 }
 
-.mainpage-menu .col-md-1:hover, .f-nav-item .btn:hover, .f-nav-item.active .btn {
+.mainpage-menu .col-md-12:hover, .f-nav-item .btn:hover, .f-nav-item.active .btn {
   background: #8580c9;
   background-color: #8580c9 !important;
   border-color: #8580c9;
@@ -430,6 +430,7 @@ footer {
 }
 .f-nav-name {
   font-size: 14px;
+  padding:0;
 }
 
 
