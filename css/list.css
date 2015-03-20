@@ -25,21 +25,28 @@ body, html {
 .list-item-text a {
 	padding: 18px 0;
 }
+.list-item-text a:hover, .list-item-text a:visited {
+	color: black;
+}
 .list-item-text {
   padding-right:30px;
   padding-top:30px;
   padding-left:0px;
 }
 .list-item-info p {
-	color: black;
+	color: #5a5866;
 	margin: 0;
 	font-size: 18px;
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
 }
-.list-item-info .title {
+.list-item-info .title a {
 	color: white;
 	font-size: 22px;
 	line-height: 1.6;
+	font-family: 'HelveticaNeue Medium';
+}
+.list-item-info .title a:hover {
+	color: rgba(255,255,255,.7);
 }
