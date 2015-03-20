@@ -1,0 +1,45 @@
+#Ingretizer .navbar-right>li>a {
+	line-height: 2;
+}
+.ingretizer {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+.row.search-bar {
+	margin-top: 5%;
+	margin-bottom:5%;
+}
+.item {
+	text-align: center;
+}
+.carousel-content {
+    color:black;
+    display:flex;
+    align-items:center;
+    text-align: center;
+}
+.carousel-content span {
+    font-size: 24px;
+    float:none;
+    color: white;
+}
+.item-icon.carrot, .item-icon.meat, .item-icon.fish, .item-icon.apple, .item-icon.bread, .item-icon.milk {
+	float: none;
+}
+.item{ padding-top:15px;padding-bottom:15px;}
+
+.carousel-control.left, .carousel-control.right {
+    background: none;
+    bottom: auto;
+}
+.carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right, .carousel-control .icon-next, .carousel-control .icon-prev {
+	top: 25px;
+}
+.carousel-control span {
+    top: 0px;
+}
+.nav-list {
+	padding: 15px 60px;
+	text-align: left;
+	font-size: 18px;
+}

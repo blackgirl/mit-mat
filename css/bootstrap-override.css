@@ -78,6 +78,11 @@
   .navbar-header.center-block {
     padding-top: 0px;
   }
+
+  /* search page */
+  #Ingretizer .navbar-right>li>a {
+    line-height: 40px;
+  }
 }
 
 /* 480 */
@@ -92,14 +97,19 @@
     font-size: 24px;
   }
 
-  .mainpage-header {
+  /*#Ingretizer .navbar-header, #Ingretizer .navbar-header.center-block,*/
+  #Ingretizer .navbar-nav>li>a {
+    font-size: 18px;
+    line-height: 32px;
+  }
+  .mainpage-header, #Ingretizer .center-block {
     margin-top: 0;
   }
   .intro-text.col-xs-6 {
     width:100%;
     left: 0;
   }
-  .mainpage-menu .col-md-1 {
+  .mainpage-menu .col-md-12 {
     padding-left: 30px;
   }
   .btn-group .btn+.btn, .btn-group .btn+.btn-group, .btn-group .btn-group+.btn, .btn-group .btn-group+.btn-group {

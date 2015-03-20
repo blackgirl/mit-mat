@@ -1,0 +1,20 @@
+
+/* Search */
+.inner-addon {
+    position: relative;
+}
+.inner-addon input {
+    padding-left: 35px;
+    font-size: 16px;
+    padding-top: 10px;  
+}
+.inner-addon span {
+    position: absolute;
+    padding: 10px 12px;
+    pointer-events: none;
+    color: grey;
+}
+
+.right-inner-addon span {
+    right: 0px;
+}
