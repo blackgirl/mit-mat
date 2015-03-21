@@ -56,10 +56,18 @@
 	border-bottom: 1px solid #7f79c8;
 }
 #tab1 .formula-title {
-	margin: 20px 0px 30px 0px;
+	margin: 20px 0px 10px 0px;
 	font-size: 28px;
 	padding-left: 30px;
 	font-family: 'HelveticaNeue Medium';
+}
+#tab1 .formula-description {
+	margin: 20px 0px 10px 0px;
+	font-weight: normal;
+	font-size: 18px;
+	padding-left: 30px;
+	font-family: 'HelveticaNeue Medium';
+	white-space: pre-wrap;
 }
 #tab1 ol {
 	-webkit-padding-start: 60px;

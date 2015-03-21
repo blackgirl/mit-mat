@@ -17,6 +17,7 @@
     display:flex;
     align-items:center;
     text-align: center;
+    margin-left: 120px; /* NP */
 }
 .carousel-content span {
     font-size: 24px;
@@ -31,6 +32,7 @@
 .carousel-control.left, .carousel-control.right {
     background: none;
     bottom: auto;
+    margin-top: 8px; /* NP */
 }
 .carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right, .carousel-control .icon-next, .carousel-control .icon-prev {
 	top: 25px;

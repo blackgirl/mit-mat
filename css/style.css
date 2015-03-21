@@ -368,12 +368,7 @@ img.brand:hover  {
   color: rgba(255,255,255,.7);
 }
 
-.item-icon.carrot,
-.item-icon.meat,
-.item-icon.fish,
-.item-icon.apple,
-.item-icon.bread,
-.item-icon.milk {
+.item-icon.category-icon {
   width: 32px;
   height: 32px;
   background-size: cover !important;
