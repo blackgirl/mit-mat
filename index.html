@@ -1,5 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html data-ng-app="henrik" data-ng-csp="" data-cast-api-enabled="true">
+<head>
 <head>
 	<meta charset="UTF-8">
 	<title>Min Mat</title>
@@ -8,12 +9,14 @@
     <!-- Bootstrap style -->
     <!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+	<!--<link rel="stylesheet" href="css/bootstrap.min.css">-->
     <!-- Theme style -->
     <link href="css/style.css" rel="stylesheet">
     <!-- Font Awesome Style -->
-    <link href="css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/font-owesome.css" rel="stylesheet">
     <!-- Bootstrap override style -->                 
     <link href="css/bootstrap-override.css" rel="stylesheet"> 
+<<<<<<< HEAD
 </head>
 <body  id="Mainpage">
 	<!-- <nav class="navbar navbar-inverse navbar-fixed-top hide">
@@ -85,23 +88,44 @@
 		  </div>
 		</div>
 	</section>
+=======
+
+    <link href="css/components/checkbox.css" rel="stylesheet">
+    <link href="css/components/input-icon.css" rel="stylesheet">
+    <link href="css/ingretizer.css" rel="stylesheet">
+    <link href="css/list.css" rel="stylesheet">
+    <link href="css/formula.css" rel="stylesheet">
+
+	<script src="js/jquery.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<!--<script src="js/bootstrap.min.js"></script>-->
+	<script src="js/modernizr.js"></script>
+	<script src="js/angular.js" type="text/javascript"></script>
+	<script src="js/angular-route.js" type="text/javascript"></script>
+
+	<script src="controllers/app.js"></script>
+</head>            
+<body ng-controller="henrikController">
+
+	<div ng-view></div>
+>>>>>>> origin/gh-pages
 
 	<footer class="navbar-fixed-bottom">
 		<div class="btn-group btn-group-justified f-nav" role="group" aria-label="...">
 		  <div class="btn-group f-nav-item" role="group">
-		    <a href="#" class="btn btn-default">
+		    <a href="#/home" class="btn btn-default">
 		    	<span class="glyphicon glyphicon-home" aria-hidden="true"></span>
 		    	<span class="f-nav-name col-xs-12">HJEM</span>
 		    </a>
 		  </div>
 		  <div class="btn-group f-nav-item" role="group">
-		    <a href="#" class="btn btn-default">
+		    <a href="#/courses/lastused" class="btn btn-default">
 		    	<span class="glyphicon glyphicon-pushpin" aria-hidden="true"></span>
 		    	<span class="f-nav-name col-xs-12">SIST BRUKTE</span>
 		    </a>
 		  </div>
 		  <div class="btn-group f-nav-item" role="group">
-		    <a href="list.html" class="btn btn-default">
+		    <a href="#" class="btn btn-default">
 		    	<span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
 		    	<span class="f-nav-name col-xs-12">MITT KJOLESKAP</span>
 		    </a>
@@ -114,12 +138,6 @@
 		  </div>
 		</div>
 	</footer>
-	<!-- Javascript -->
-	<!-- Placed at the end of the document so the pages load faster -->
-	<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
-	<script src="js/jquery.js"></script>
-	<script src="js/angular.js" type="text/javascript"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-	<script src="js/modernizr.js"></script>
+    	
 </body>
-</html>
+</html>    

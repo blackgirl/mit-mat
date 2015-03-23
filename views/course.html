@@ -1,0 +1,47 @@
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+	  <div class="container-fluid clearfix">
+	      <ul class="nav navbar-nav navbar-left nw">
+	        <li ><a href="javascript:void(0)" ng-click='GoBack()'><span class="glyphicon glyphicon-chevron-left"></span> Tilbake</a></li>
+	      </ul>
+	      <ul class="nav navbar-nav nw navbar-header center-block">
+	        <li ><a href="#">{{Course.Name}}</a></li>
+	      </ul>
+	  </div>
+	</nav>
+
+	<header class="formulapage-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-xs-12 formula-img">
+                    <img class="img-responsive logo" src="{{Course.ImgPath}}{{Course.ImgLarge}}" alt="">
+			        <ul class="nav nav-tabs nav-justified">
+					  <li role="presentation"  class="active"><a href="#tab1" target="_self" data-toggle="tab">Fremgangsmåte</a></li>
+					  <li role="presentation"><a href="#tab2"  target="_self" data-toggle="tab">Ingredienser</a></li>
+					</ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+	<section class="page-formula">
+		<div class="tab-content">
+
+	      <div class="tab-pane active" id="tab1">
+	      	<p class="formula-title">{{Course.LongName}}</p>
+	      	<p class="formula-description">
+	         {{Course.Description}}
+	        </p>
+	         	<div class="clearfix"></div>
+	      </div>
+
+	      <div class="tab-pane" id="tab2">
+	        <ul class="list-group">
+	        	<li ng-repeat='detail in Course.Details' class="list-group-item">
+	        	{{detail.Quantity}}{{detail.MeasurementName}} {{detail.IngredientName}}
+	        	</li>
+	        </ul>
+	      </div>
+
+	   </div>
+
+	</section>

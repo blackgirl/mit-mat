@@ -1,0 +1,53 @@
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+	  <div class="container-fluid clearfix">
+	      <ul class="nav navbar-nav navbar-left nw">
+	        <li ><a href="#/home"><span class="glyphicon glyphicon-chevron-left"></span> Tilbake</a></li>
+	      </ul>
+	      <ul class="nav navbar-nav nw navbar-header center-block">
+	        <li ><a href="#" disabled>Ingredienser</a></li>
+	      </ul>
+	      <ul class="nav navbar-nav navbar-right nw">
+	        <li><a href="javascript:void(0)" ng-click='ProceedLookup()'>Ferdig <span class="glyphicon glyphicon-chevron-right hide"></span></a></li>
+	      </ul>
+	  </div>
+	</nav>
+
+	<section class="page-list ingretizer">
+		<div class="row search-bar">
+	        <div class="col-md-12 col-xs-12">
+	    		<div class="left-inner-addon inner-addon">
+				    <span class="glyphicon glyphicon-search"></span>
+				    <input type="search" class="form-control" placeholder="Søk etter ingrediens"/>
+				</div>
+	        </div>
+        </div>
+		<div class="row">
+			<div id="carousel-ingredients" class="carousel slide" data-ride="carousel" data-interval="false">
+			    <!-- Wrapper for slides -->
+			    <div class="row">
+			        <div class="col-md-offset-3 col-md-6 col-xs-12">
+			            <div class="carousel-inner" onclick="return;">
+			            <div ng-repeat="category in Categories"  class="item {{CategoryActiveClass(category)}}">
+			                    <div class="carousel-content">
+		                            <span class="item-icon glyphicon category-icon" style='background: url(images/icons-cat/{{category.Icon}}) no-repeat'></span>
+							  		<span class="item-name">{{category.Name}}</span>
+			                    </div>
+			                    <div class="checkbox checkbox-circle" ng-repeat="ingredient in category.Ingredients">
+			                        <input id="ingredient_{{ingredient.IngredientID}}" type="checkbox" ng-model='ingredient.IsSelected'>
+			                        <label for="ingredient_{{ingredient.IngredientID}}">
+			                            {{ingredient.Name}}
+			                        </label>
+			                    </div>			                    
+			            </div>
+			        </div>
+			    </div>
+			    <!-- Controls --> 
+				<a class="left carousel-control" href="#carousel-ingredients" target="_self" data-slide="prev">
+				    <span class="glyphicon glyphicon-chevron-left"></span>
+				</a>
+				<a class="right carousel-control" href="#carousel-ingredients" target="_self" data-slide="next">
+				    <span class="glyphicon glyphicon-chevron-right"></span>
+				</a>
+			</div>			            
+		</div>
+	</section>			
