@@ -17,11 +17,11 @@
 	        <div class="col-md-12 col-xs-12">
 	    		<div class="left-inner-addon inner-addon">
 				    <span class="glyphicon glyphicon-search"></span>
-				    <input type="search" class="form-control" placeholder="Søk etter ingrediens"/>
+				    <input type="search" class="form-control" placeholder="Søk etter ingrediens" ng-model='search.Name'/>
 				</div>
 	        </div>
         </div>
-		<div class="row">
+		<div class="row" ng-if='!search.Name'>
 			<div id="carousel-ingredients" class="carousel slide" data-ride="carousel" data-interval="false">
 			    <!-- Wrapper for slides -->
 			    <div class="row">
@@ -39,6 +39,7 @@
 			                        </label>
 			                    </div>			                    
 			            </div>
+			            </div>
 			        </div>
 			    </div>
 			    <!-- Controls --> 
@@ -50,4 +51,23 @@
 				</a>
 			</div>			            
 		</div>
+		<div class="row" ng-if='search.Name'>
+			<div id="ingredients-filtered" >
+			    <!-- Wrapper for slides -->
+			    <div class="row">
+			        <div class="col-md-offset-3 col-md-6 col-xs-12">
+			            <div ng-repeat="category in Categories"  >
+		                    <div class="checkbox checkbox-circle" ng-repeat="ingredient in category.Ingredients | filter:search">
+		                        <input id="ingredient_{{ingredient.IngredientID}}" type="checkbox" ng-model='ingredient.IsSelected'>
+		                        <label for="ingredient_{{ingredient.IngredientID}}">
+		                            {{ingredient.Name}}
+		                        </label>
+		                    </div>			                    
+			            </div>
+			        </div>
+			    </div>
+			</div>			            
+		</div>
+
+
 	</section>			
