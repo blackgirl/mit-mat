@@ -1,0 +1,40 @@
+#btnClearAll {
+	background: #9894C4;
+	text-align: center;
+	border-radius: 0px;
+	width: 	84%;
+	margin-left: 8%;
+	margin-right: 8%;
+  	margin-top: 37px;
+  	margin-bottom: 37px;
+}
+
+
+#my-ingredients .item {
+	background: #8782BF;
+	border-bottom: solid 1px #7D77C5;
+	text-align: left;
+	padding: 0px;
+	height: 45px;
+}
+
+#my-ingredients .item label{
+	margin-left: 8%;
+	height: 45px;
+	line-height: 45px;
+}
+#my-ingredients .item .btnDelete {
+	background: #CE0E1C;
+	text-align: center;
+	width: 100px;
+	height: 45px;
+	margin-right: 15px;
+	border-radius: 0px;	
+	float: right;
+}
+
+#my-ingredients .no-items {
+	margin-left: 8%;
+	margin-right: 8%;
+	margin-top: 8%;
+}
