@@ -1,0 +1,33 @@
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+	  <div class="container-fluid clearfix">
+	      <ul class="nav navbar-nav navbar-left nw">
+	        <li ><a href="javascript:void(0)" ng-click="GoBack()"><span class="glyphicon glyphicon-chevron-left"></span> Tilbake</a></li>
+	      </ul>
+	      <ul class="nav navbar-nav nw navbar-header center-block">
+	        <li ><a href="#" disabled>Mine ingredienser</a></li>
+	      </ul>
+	  </div>
+	</nav>
+
+	<section class="page-list ingretizer" id='my-ingredients'>
+		<div class="row" ng-if='AnySelected'>
+	        <div class="col-md-offset-3 col-md-6 col-xs-12">
+	        <button ng-click='clearAll()' id='btnClearAll' class="btn">Tøm kjøleskapet</button>
+	        </div>
+        </div>
+		<div class="row">
+	        <div class="col-md-offset-3 col-md-6 col-xs-12">
+	            <div ng-repeat="category in Categories"  >
+                    <div  ng-repeat="ingredient in category.Ingredients | filter: ingredient.IsSelected=true" class="item">
+                        <label >
+                            {{ingredient.Name}}
+                        </label>
+                        <button ng-click='DeleteIngredient(ingredient)' class="btn btnDelete">slett</button>
+                    </div>			                    
+	            </div>
+	            <div class="no-items" ng-if='!AnySelected'>
+	            Du har foreløpig ingenting i kjøleskapet ditt. Trykk på «hjem» knappen og velg ingredienser, slik at vi kan foreslå noen matretter for deg.
+	            </div>
+	        </div>
+		</div>
+	</section>			
