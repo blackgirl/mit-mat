@@ -13,10 +13,6 @@ app.config (['$routeProvider', function ($routeProvider) {
         templateUrl: 'views/courses.html',
         controller: 'IngredientSearchResultsController'
       }).
-      when('/ingredients/my', {
-        templateUrl: 'views/selection.html',
-        controller: 'IngredientSelsectionController'
-      }).
       when('/ingredients/:categoryId', {
         templateUrl: 'views/ingredients.html',
         controller: 'IngredientsController'
@@ -151,67 +147,5 @@ function CourseDetailController($scope, $http, $location, $routeParams, $window)
 		$scope.Course = course;
 	});
 
-
-}
-
-function IngredientSelsectionController($scope, $http, $location, $routeParams, $window) {
-		// reset selection on init 
-
-
-	$scope.AnySelected = globalCache.selectedIngredients != null &&  globalCache.selectedIngredients.length > 0;
-
-	globalCache.fetchCategories($http, function (categories) {
-		$scope.Categories = categories; 
-		globalCache.selectedIngredients = [];
-		for(var ic in $scope.Categories){
-			for (var i in $scope.Categories[ic].Ingredients){
-				if ($scope.Categories[ic].Ingredients[i].IsSelected){
-					globalCache.selectedIngredients.push($scope.Categories[ic].Ingredients[i].IngredientID);
-				}
-			}
-		}		
-		/*
-		for(var ic in $scope.Categories){
-			for (var i in $scope.Categories[ic].Ingredients){
-				
-				for (var si in globalCache.selectedIngredients)
-					if ($scope.Categories[ic].Ingredients[i].IngredientID == globalCache.selectedIngredients[si]){
-						$scope.Categories[ic].Ingredients[i].IsSelected = true;
-					}
-
-			}
-		}
-		*/				
-		$scope.AnySelected = globalCache.selectedIngredients != null &&  globalCache.selectedIngredients.length > 0;
-	});
-
-	$scope.updteSelectionEntries = function () {
-		globalCache.selectedIngredients = [];
-		for(var ic in $scope.Categories){
-			for (var i in $scope.Categories[ic].Ingredients){
-				if ($scope.Categories[ic].Ingredients[i].IsSelected){
-					globalCache.selectedIngredients.push($scope.Categories[ic].Ingredients[i].IngredientID);
-				}
-			}
-		}		
-		$scope.AnySelected = globalCache.selectedIngredients != null &&  globalCache.selectedIngredients.length > 0;
-	}
-
-	$scope.clearAll = function () {
-		for(var ic in $scope.Categories){
-			for (var i in $scope.Categories[ic].Ingredients){
-				$scope.Categories[ic].Ingredients[i].IsSelected = false;
-			}
-		}
-
-		globalCache.selectedIngredients = [];
-		$scope.AnySelected = false;
-	};
-
-	$scope.DeleteIngredient = function(ingredient) {
-		ingredient.IsSelected = false;
-
-		$scope.updteSelectionEntries();
-	};
 
 }
