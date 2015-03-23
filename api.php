@@ -36,6 +36,13 @@ function db_fetch($query) {
 	return $result;
 }
 
+function db_exec($query) {
+	db_connect();
+
+	$qresult = mysql_query($query) or die('Query failed: ' . mysql_error());
+	return mysql_affected_rows();
+}
+
 
 function db_getCategories() {
 	$categories = db_fetch('SELECT * FROM categories');
@@ -73,6 +80,8 @@ function db_getCourseById($id) {
 	foreach($courses as $i => $v){
 		$courses[$i]['Details'] = array();	
 		$courses[$i]['PrimaryIngredients'] = array();
+
+		db_exec(sprintf('insert into courseusage (CourseID) values(%d)', $v['CourseID']));
 	}
 
 	foreach($details as $i => $v ){ 
@@ -136,6 +145,48 @@ function db_getCourseByIngridients($ingredientIds) {
 	return $courses;
 }
 
+function db_getLastUsedCourses() {
+
+	// fetch courses 
+	$courses = db_fetch('SELECT c.* 
+		FROM coursemain c 
+		inner join (SELECT CourseID, count(*) as rating FROM courseusage Group by CourseID ) r on c.CourseID = r.CourseID 
+		order by rating desc 
+		limit 12');
+
+	// fetch details
+	$details = db_fetch('SELECT d.*,
+		i.Name as IngredientName,
+		i.MeasurementID,
+		m.Name as MeasurementName,
+		c.Name as CategoryName,
+		c.Icon as CategoryIcon
+		FROM coursedetail d 
+		inner join (SELECT CourseID, count(*) rating FROM `courseusage` Group by CourseID ) r on d.CourseID = r.CourseID 
+		inner join ingredients i on d.IngredientID = i.IngredientID 
+		inner join categories c on d.CategoryID = c.CategoryID 
+		left join measurements m on i.MeasurementID = m.MeasurementID
+		');
+
+	foreach($courses as $i => $v) {
+		$courses[$i]['Details'] = array();	
+		$courses[$i]['PrimaryIngredients'] = array();
+	}
+
+	foreach($details as $i => $v ){ 
+		$courseId = $v['CourseID'];
+		foreach($courses as $ic => $vc)
+			if ($vc['CourseID'] == $courseId) {
+				array_push($courses[$ic]['Details'], $v);
+				if ($v['PrimaryYesNo'] == 1)
+					array_push($courses[$ic]['PrimaryIngredients'], $v);
+				break;
+			}
+	}	
+
+	return $courses;
+}
+
 
 function routeApiRequst() {
 	$query = $_GET['q'];
@@ -145,6 +196,9 @@ function routeApiRequst() {
 			break;
 		case 'course':
 			return db_getCourseById($_GET['id']) ;
+			break;
+		case 'lastusedcourses':
+			return db_getLastUsedCourses() ;
 			break;
 		case 'findcourses':
 			return db_getCourseByIngridients(json_decode($_GET['ingredients']));

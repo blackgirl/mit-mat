@@ -17,6 +17,10 @@ app.config (['$routeProvider', function ($routeProvider) {
         templateUrl: 'views/ingredients.html',
         controller: 'IngredientsController'
       }).
+      when('/courses/lastused', {
+        templateUrl: 'views/courses.html',
+        controller: 'LastUsedController'
+      }).
       when('/course/:courseId', {
         templateUrl: 'views/course.html',
         controller: 'CourseDetailController'
@@ -28,7 +32,8 @@ app.config (['$routeProvider', function ($routeProvider) {
 }]);
 
 // global variables 
-var apiBaseUrl = 'http://resxedit.com/api.php';
+//var apiBaseUrl = 'http://resxedit.com/api.php';
+var apiBaseUrl = 'api.php';
 
 var globalCache = {
 	categories : null,
@@ -57,7 +62,9 @@ var globalCache = {
         }).error(function (data, status) {
             alert('Service is not available. Pleasae try onece again later')
         });			
-	}, 
+	}
+
+
 };
 
 
@@ -119,13 +126,21 @@ function IngredientsController($scope, $http, $routeParams, $location) {
 }
 
 function IngredientSearchResultsController($scope, $http) {
+	$scope.Title = 'Treff';
  		$http.get(apiBaseUrl + '?q=findcourses&ingredients='+JSON.stringify(globalCache.selectedIngredients)).success(function (data, status) {
  			$scope.Courses = data;
         }).error(function (data, status) {
             alert('Service is not available. Pleasae try onece again later')
         });	
 }
-
+function LastUsedController($scope, $http) {
+	$scope.Title = 'Sist brukte';
+ 		$http.get(apiBaseUrl + '?q=lastusedcourses').success(function (data, status) {
+ 			$scope.Courses = data;
+        }).error(function (data, status) {
+            alert('Service is not available. Pleasae try onece again later')
+        });	
+}
 function CourseDetailController($scope, $http, $location, $routeParams, $window) {
 	$scope.CourseId = $routeParams.courseId;
 	globalCache.fetchCourse($http, $scope.CourseId, function (course) {
