@@ -95,6 +95,7 @@ function HomeController($scope, $http, $location) {
 }
 
 function IngredientsController($scope, $http, $routeParams, $location) {
+	$scope.search = { };
 	$scope.SelectedCategoryId = $routeParams.categoryId;
 	// reset selection on init 
 	globalCache.selectedIngredients = [];

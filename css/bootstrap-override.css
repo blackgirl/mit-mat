@@ -18,6 +18,9 @@
   border-top-right-radius: 0px;
 }
 
+.navbar-fixed-bottom {
+  position: absolute;
+}
 /* 1200 */
 
 @media (min-width: 1200px) {
@@ -27,7 +30,8 @@
 /* 990 */
 
 @media (max-width: 990px) {
-  body {
+
+  section {
       padding: 66px 0;
   }
   .visible-md {
@@ -36,7 +40,7 @@
 
 }
 @media (min-width: 990px) {
-  body {
+  section {
       padding: 66px 0;
   }
   
@@ -45,7 +49,7 @@
 /* 768 */
 
 @media (max-width: 768px) {
-  body {
+  section {
     padding: 55px 0;
   }
   .navbar-left,.navbar-header {
@@ -88,7 +92,7 @@
 /* 480 */
 
 @media (max-width: 480px) {
-  body {
+  section {
     padding: 55px 0 66px;
     height: auto;
   }
