@@ -319,6 +319,7 @@ img.brand:hover  {
 }
 .navbar-right li {
   float: right;
+  /* padding-top: 0px; */
 }
 .center-block {
   width:50%;

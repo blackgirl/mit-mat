@@ -1,6 +1,6 @@
 .checkbox {
 
-    padding: 18px 20px 18px 60px;
+    padding: 9px 20px 9px 60px;
     text-align: left;
     font-size: 18px;
     background: rgba(255,255,255,.25);
@@ -14,17 +14,17 @@
     display: inline-block;
     position: relative;
     padding-left: 40px; 
-    min-height: 44px; /* NP*/
-    line-height: 44px;
-    font-size: 30px;
+    min-height: 32px; /* NP*/
+    line-height: 32px;
+    font-size: 18px;
     font-weight: normal;
 }
 .checkbox label::before {
     content: "";
     display: inline-block;
     position: absolute;
-    width: 44px;
-    height: 44px;
+    width: 32px;
+    height: 32px;
     left: 0;
     margin-left: -20px;
     border: 1px solid #fff; /* NP */
@@ -36,8 +36,8 @@
 .checkbox label::after {
     display: inline-block;
     position: absolute;
-    width: 44px;
-    height: 44px;
+    width: 32px;
+    height: 32px;
     left: 0;
     top: 0;
     margin-left: -20px;
@@ -60,7 +60,8 @@
     font-family: 'FontAwesome';
     /*content: "\f00c"; NP */
     content: " "; /* NP */
-    background: url(checked.png);
+    background: url(checked.png)  no-repeat;
+    background-size: contain;
     color: #8781C6;
 }
 .checkbox input[type="checkbox"]:disabled + label {
