@@ -13,9 +13,10 @@
     <section class="content mainpage-menu">
         <div class="row">
           
-          <div ng-repeat="category in Categories" class="col-md-12 clearfix" ng-click="navigateToIngredients(category)" >
+          <div ng-repeat="category in Categories track by $index" class="col-md-12 clearfix" ng-click="navigateToIngredients(category)" >
+            {{category}}
             <div class="menu-item to-l">
-                <span class="item-icon glyphicon category-icon" style='background: url(images/icons-cat/{{category.Icon}}) no-repeat'></span>
+                <span class="item-icon glyphicon category-icon" back-img="{{category.Icon}}";></span>
                 <span class="item-name">{{category.Name}}</span>
             </div>
             <span class="glyphicon glyphicon-menu-right item-arrow to-r"></span>
