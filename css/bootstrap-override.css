@@ -81,7 +81,7 @@
     padding-bottom: 5px;
     line-height: 1;
   }
-  .navbar-left>li>a, .navbar-right {
+  .navbar-left>li>a, .navbar-right>li>a {
     line-height: 1.75;
   }
   .formulapage-header {
