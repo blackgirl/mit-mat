@@ -53,11 +53,11 @@
 
 	.slide {
       position: absolute;
-      top: 0;
+      /*top: 15%;*/
       width: 100%;
     }
     .slide div {
-      margin: 10px;
+      /*margin: 10px;*/
     }
     
     .slide.ng-enter,

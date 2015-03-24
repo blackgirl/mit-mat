@@ -6,12 +6,12 @@
 @font-face {
   font-family: 'HelveticaNeue Medium';
   src: url('../Fonts/HelveticaNeue/helveticaneuecyr-medium.otf') format('OpenType'), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-       url('../Fonts/HelveticaNeue/HelveticaNeue-Medium.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+       url('../Fonts/HelveticaNeue/HelveticaNeue-Medium.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3â€”5 */
 }
 @font-face {
   font-family: 'HelveticaNeue Light';
   src: url('../Fonts/HelveticaNeue/helveticaneuecyr-light.otf') format('OpenType'), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-       url('../Fonts/HelveticaNeue/HelveticaNeue-Light.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+       url('../Fonts/HelveticaNeue/HelveticaNeue-Light.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3â€”5 */
 }
 
 html {
@@ -39,6 +39,14 @@ body, html {
   height: 100%;
     background: #8580c9;
     overflow-y: auto;
+    position: relative;
+}
+
+.mainwrapper {
+  position: absolute;
+  height: 100%;
+  width:100%;
+  overflow: scroll;
 }
 
 .body-padding {
@@ -150,6 +158,10 @@ hr {
 }
 .to-r {
   float: right;
+  /* position: absolute; */
+}
+.course-arr.to-r {
+  position: absolute;
 }
 .to-l {
   float: left;

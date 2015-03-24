@@ -6,7 +6,7 @@ body, html {
 
 .page-list {
   background: #8580c9;
-  padding: 30px 0;
+  /*padding: 30px 0;*/
 }
 .list-item {
 	border-bottom: 2px solid rgba(133, 128, 201,.7);
@@ -32,6 +32,7 @@ body, html {
   padding-right:30px;
   padding-top:30px;
   padding-left:0px;
+  padding-bottom: 30px;
 }
 .list-item-info p {
 	color: #5a5866;
@@ -49,4 +50,11 @@ body, html {
 }
 .list-item-info .title a:hover {
 	color: rgba(255,255,255,.7);
+}
+
+
+.course-thumb {
+	  display: block;
+  height: 100%;
+  min-height: 120px;
 }

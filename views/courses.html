@@ -15,8 +15,8 @@
 
 		<div ng-repeat='course in Courses' class="row list-item" >
             <div class="col-md-3 col-xs-4 list-item-img">
-                <a href="#/course/{{course.CourseID}}">
-                    <img class="img-responsive" ng-src="{{course.ImgPath}}{{course.ImgMedium}}" alt="">
+                <a href="#/course/{{course.CourseID}}" back-img="{{course.ImgPath}}{{course.ImgMedium}}" class='course-thumb'>
+                    <!--<img class="img-responsive" ng-src="{{course.ImgPath}}{{course.ImgMedium}}" alt="">-->
                 </a>
             </div>
             <div class="col-md-9 col-xs-8 list-item-text">
@@ -29,7 +29,7 @@
 					</span>
 	                <!--<a href="formula.html">laudantium</a>, <a href="formula.html">veniam</a>, <a href="formula.html">lorem</a></p>-->
 	            </div>
-	            <a class="to-r" href="#/course/{{course.CourseID}}"><span class="glyphicon glyphicon-chevron-right"></span></a>
+	            <a class="to-r course-arr" href="#/course/{{course.CourseID}}"><span class="glyphicon glyphicon-chevron-right"></span></a>
             </div>
         </div>
 </section>        
