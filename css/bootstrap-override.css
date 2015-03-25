@@ -1,6 +1,11 @@
-.navbar-nav>li>a, .center-block a {
+.center-block a {
   color: white !important;
 }
+
+.navbar-nav.navbar-left>li>a, .navbar-nav.navbar-right >li>a {
+  color: #1284FF;
+}
+
 .list-group-item {
   background-color: rgba(255,255,255,.25);
   border: none;
@@ -25,6 +30,8 @@
 .carousel-inner {
   margin-bottom: 55px;
 }
+
+
 /* 1200 */
 
 @media (min-width: 1200px) {
@@ -81,7 +88,7 @@
     padding-bottom: 5px;
     line-height: 1;
   }
-  .navbar-left>li>a, .navbar-right>li>a {
+  .navbar-left>li>a, .navbar-header>li>a, .navbar-right>li>a {
     line-height: 1.75;
   }
   .formulapage-header {
@@ -94,6 +101,7 @@
 
   /* search page */
   #Ingretizer .navbar-right>li>a,
+  #Ingretizer .navbar-header>li>a, 
   #Ingretizer .navbar-left>li>a {
     line-height: 40px;
   }
@@ -109,8 +117,8 @@
   section.mainpage-menu {
     padding-top:0;
   }
-  .navbar-header, .navbar-header.center-block,  .navbar-right{
-    padding:7px;
+  .navbar-left, .navbar-header.center-block,  .navbar-right{
+    /* padding:7px; */
     font-size: 24px;
     font-size: 18px;
   }

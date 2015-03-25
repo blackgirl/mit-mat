@@ -14,10 +14,11 @@
 }
 .carousel-content {
     color:black;
-    display:flex;
-    align-items:center;
+    /* display:flex; */
+    /* align-items:center; */
     text-align: center;
-    margin-left: 17%; /* NP */
+    /* padding-left: 17%; */ /* NP */
+    line-height: 24px;
     margin: 0 auto;
 }
 .carousel-content span {
@@ -25,10 +26,14 @@
     float:none;
     color: white;
     white-space: nowrap;
+    line-height: 32px;
 }
-.item-icon.category-icon,
-.item-icon.carrot, .item-icon.meat, .item-icon.fish, .item-icon.apple, .item-icon.bread, .item-icon.milk {
+.carousel-content .item-icon.category-icon /*,
+.item-icon.carrot, .item-icon.meat, .item-icon.fish, .item-icon.apple, .item-icon.bread, .item-icon.milk*/ {
 	float: none;
+	width: 24px;
+	height: 24px;
+	display: inline-block;
 }
 .item{ padding-top:15px;padding-bottom:15px;}
 
@@ -38,7 +43,7 @@
     margin-top: 8px; /* NP */
 }
 .carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right, .carousel-control .icon-next, .carousel-control .icon-prev {
-	top: 25px;
+	top: 12px;
 }
 .carousel-control span {
     top: 0px;

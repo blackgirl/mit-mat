@@ -41,11 +41,12 @@
 }
 
 .mainpage-menu .item-name {
-	line-height: 24px;
+	line-height: 32px;
 	font-size: 16px;
 }
 .mainpage-menu .menu-item {
 	/*padding:15px ;*/
+	line-height: 32px;
 }
 
 
