@@ -13,6 +13,15 @@
   src: url('../Fonts/HelveticaNeue/helveticaneuecyr-light.otf') format('OpenType'), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
        url('../Fonts/HelveticaNeue/HelveticaNeue-Light.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3â€”5 */
 }
+@font-face {
+  font-family: 'themify';
+    src: url("../Fonts/themify/themify.eot");
+    src: url("../Fonts/themify/themify.eot?#iefix") format("embedded-opentype"),
+        url("../Fonts/themify/themify.woff") format("woff"),
+        url("../Fonts/themify/themify.ttf") format("truetype"),
+        url("../Fonts/themify/themify.svg#fontname") format("svg");
+}
+
 
 html {
 	overflow-y:scroll;
@@ -429,10 +438,13 @@ footer {
   border: none;
   margin: 0;
   border-radius: 0;
+  padding-left: 0px;
+  padding-right: 0px;
   }
   .f-nav-item:not(:last-of-type) .btn {
     border-right: 1px solid rgba(255,255,255,.5);
 }
+
 .f-nav-item .glyphicon {
   font-size: 24px;
 }
@@ -531,3 +543,27 @@ footer {
 .spacer100 {
   height: 100px !important;
 }
+
+
+
+.glyphicon.themify {
+  font-family: 'themify'; /* 'Glyphicons Halflings'*/
+ }
+
+
+.glyphicon.glyphicon-home.themify:before {
+  content: "\E69B";
+  font-family: 'themify';
+}
+.glyphicon.glyphicon-pushpin.themify:before {
+  content: "\E6DE";
+  font-family: 'themify';
+}
+.glyphicon.glyphicon-list-alt.themify:before {
+  content: "\E6DC";
+}
+.glyphicon.glyphicon-cog.themify:before {
+  content: "\E60F";
+}
+
+

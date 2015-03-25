@@ -17,6 +17,7 @@ body, html {
 	color: rgba(255,255,255,.7);
 }
 .list-item-info {
+    padding-left: 0px;
 	
 }
 .list-item-img {
@@ -32,19 +33,24 @@ body, html {
   padding-right:30px;
   padding-top:30px;
   padding-left:0px;
-  padding-bottom: 30px;
+  /* padding-bottom: 30px; */
+}
+.list-item-info p.title {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+
 }
 .list-item-info p {
 	color: #5a5866;
 	margin: 0;
-	font-size: 18px;
+	/* font-size: 18px; */
 	overflow: hidden;
-	text-overflow: ellipsis;
-	white-space: nowrap;
+	max-height: 3em;
 }
 .list-item-info .title a {
 	color: white;
-	font-size: 22px;
+	/* font-size: 22px; */
 	line-height: 1.6;
 	font-family: 'HelveticaNeue Medium';
 }

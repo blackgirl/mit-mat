@@ -21,11 +21,10 @@
             </div>
             <div class="col-md-9 col-xs-8 list-item-text">
             	<div class="list-item-info to-l col-xs-11">
-	                <p class="title"><a href="#/course/{{course.CourseID}}">{{course.Name}}</a></p>
+	                <p class="title lead"><a href="#/course/{{course.CourseID}}">{{course.Name}}</a></p>
 	                <p>Basis ingredienser: 
 					<span ng-repeat='ingredient in course.PrimaryIngredients'>
-					{{ingredient.IngredientName}}
-					{{$last ? '' : ', '}}
+					{{ingredient.IngredientName}}{{$last ? '' : ', '}}
 					</span>
 	                <!--<a href="formula.html">laudantium</a>, <a href="formula.html">veniam</a>, <a href="formula.html">lorem</a></p>-->
 	            </div>
