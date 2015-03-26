@@ -1,41 +1,38 @@
+/*
 body, html {
 	height: 100%;
     background: #706ab1;
     overflow-y: auto;
 }
-
+*/
 .page-list {
-  background: #706ab1;
+  /* background: #706ab1; */
   /*padding: 30px 0;*/
 }
 .list-item {
 	border-bottom: 2px solid rgba(133, 128, 201,.7);
 	background: rgba(255,255,255,.25);
 }
-.list-item .glyphicon {
+/*.list-item .glyphicon {
 	font-size: 22px;
 	color: rgba(255,255,255,.7);
-}
-<<<<<<< Updated upstream
+}*/
 .list-item-info {
-=======
-.list-item-info {
->>>>>>> Stashed changes
     padding-left: 0px;
 	
 }
 .list-item-img {
-
+padding-left: 0px;
 }
 .list-item-text a {
-	padding: 18px 0;
+	/*padding: 18px 0;*/
 }
 .list-item-text a:hover, .list-item-text a:visited {
 	color: black;
 }
 .list-item-text {
   padding-right:30px;
-  padding-top:30px;
+  /*padding-top:30px;*/
   padding-left:0px;
   /* padding-bottom: 30px; */
 }
@@ -46,11 +43,12 @@ body, html {
 
 }
 .list-item-info p {
-	color: #5a5866;
+	color: #3c3a43;
 	margin: 0;
 	/* font-size: 18px; */
 	overflow: hidden;
 	max-height: 3em;
+	text-overflow: ellipsis;
 }
 .list-item-info .title a {
 	color: white;
@@ -65,6 +63,6 @@ body, html {
 
 .course-thumb {
 	  display: block;
-  height: 100%;
-  min-height: 120px;
+	  width: 100%;
+	  min-height: 120px;
 }

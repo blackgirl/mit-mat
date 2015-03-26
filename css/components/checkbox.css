@@ -13,17 +13,17 @@
     display: inline-block;
     position: relative;
     padding-left: 40px; 
-    min-height: 32px; /* NP*/
-    line-height: 32px;
-    font-size: 18px;
+    /*min-height: 32px; /* NP*/*/
+    /*line-height: 32px;*/
+    /*font-size: 18px;*/
     font-weight: normal;
 }
 .checkbox label::before {
     content: "";
     display: inline-block;
     position: absolute;
-    width: 32px;
-    height: 32px;
+    /*width: 32px;*/
+    /*height: 32px;*/
     left: 0;
     margin-left: -20px;
     border: 1px solid #fff; /* NP */
@@ -35,8 +35,8 @@
 .checkbox label::after {
     display: inline-block;
     position: absolute;
-    width: 32px;
-    height: 32px;
+    /*width: 32px;*/
+    /*height: 32px;*/
     left: 0;
     top: 0;
     margin-left: -20px;

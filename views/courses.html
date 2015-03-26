@@ -1,8 +1,7 @@
-<<<<<<< Updated upstream
 	<nav class="navbar navbar-inverse navbar-fixed-top">
 	  <div class="container-fluid clearfix">
 	      <ul class="nav navbar-nav navbar-left nw">
-	        <li ><a href="javascript:void(0)" ng-click="GoBack()"><span class="glyphicon glyphicon-chevron-left"></span> Tilbake</a></li>
+	        <li ><a href="javascript:void(0)" ng-click="GoBack()"><span class="glyphicon back-icon-left"></span> Tilbake</a></li>
 	      </ul>
 	      <ul class="nav navbar-nav nw navbar-header center-block">
 	        <li ><a href="#" disabled>{{Title}}</a></li>
@@ -15,12 +14,12 @@
 <section class="page-list">
 
 		<div ng-repeat='course in Courses' class="row list-item" >
-            <div class="col-md-3 col-xs-4 list-item-img">
+            <div class="col-md-3 col-xs-5 list-item-img">
                 <a href="#/course/{{course.CourseID}}" back-img="{{course.ImgPath}}{{course.ImgMedium}}" class='course-thumb'>
                     <!--<img class="img-responsive" ng-src="{{course.ImgPath}}{{course.ImgMedium}}" alt="">-->
                 </a>
             </div>
-            <div class="col-md-9 col-xs-8 list-item-text">
+            <div class="col-md-9 col-xs-7 list-item-text">
             	<div class="list-item-info to-l col-xs-11">
 	                <p class="title lead"><a href="#/course/{{course.CourseID}}">{{course.Name}}</a></p>
 	                <p>Basis ingredienser: 
@@ -29,42 +28,7 @@
 					</span>
 	                <!--<a href="formula.html">laudantium</a>, <a href="formula.html">veniam</a>, <a href="formula.html">lorem</a></p>-->
 	            </div>
-	            <a class="to-r course-arr" href="#/course/{{course.CourseID}}"><span class="glyphicon glyphicon-chevron-right"></span></a>
+	            <a class="to-r course-arr" href="#/course/{{course.CourseID}}"><span class="glyphicon arr-right"></span></a>
             </div>
         </div>
-=======
-	<nav class="navbar navbar-inverse navbar-fixed-top">
-	  <div class="container-fluid clearfix">
-	      <ul class="nav navbar-nav navbar-left nw">
-	        <li ><a href="javascript:void(0)" ng-click="GoBack()"><span class="glyphicon glyphicon-chevron-left"></span> Tilbake</a></li>
-	      </ul>
-	      <ul class="nav navbar-nav nw navbar-header center-block">
-	        <li ><a href="#" disabled>{{Title}}</a></li>
-	      </ul>
-	      <!-- <ul class="nav navbar-nav navbar-right nw">
-	        <li><a href="#">Page 3 <span class="glyphicon glyphicon-chevron-right"></span></a></li> 
-	      </ul> -->
-	  </div>
-	</nav>
-<section class="page-list">
-
-		<div ng-repeat='course in Courses' class="row list-item" >
-            <div class="col-md-3 col-xs-4 list-item-img">
-                <a href="#/course/{{course.CourseID}}" back-img="{{course.ImgPath}}{{course.ImgMedium}}" class='course-thumb'>
-                    <!--<img class="img-responsive" ng-src="{{course.ImgPath}}{{course.ImgMedium}}" alt="">-->
-                </a>
-            </div>
-            <div class="col-md-9 col-xs-8 list-item-text">
-            	<div class="list-item-info to-l col-xs-11">
-	                <p class="title lead"><a href="#/course/{{course.CourseID}}">{{course.Name}}</a></p>
-	                <p>Basis ingredienser: 
-					<span ng-repeat='ingredient in course.PrimaryIngredients'>
-					{{ingredient.IngredientName}}{{$last ? '' : ', '}}
-					</span>
-	                <!--<a href="formula.html">laudantium</a>, <a href="formula.html">veniam</a>, <a href="formula.html">lorem</a></p>-->
-	            </div>
-	            <a class="to-r course-arr" href="#/course/{{course.CourseID}}"><span class="glyphicon glyphicon-chevron-right"></span></a>
-            </div>
-        </div>
->>>>>>> Stashed changes
 </section>        
