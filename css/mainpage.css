@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 #mainpage-wrapper {
 	padding: 0px;
 }
@@ -79,4 +80,87 @@
     .slide.ng-leave.ng-leave-active {
       left: 100%;
       opacity: 0;
+=======
+#mainpage-wrapper {
+	padding: 0px;
+}
+#Mainpage {
+	padding-top: 0;
+}
+
+.mainpage-header {
+	margin: 40px 0;
+}
+.mainpage-header {
+	margin: 0 auto;
+	padding: 15px 15% 45px;
+}
+.mainpage-header .container {
+	padding-right: 0px;
+	padding-left: 0px;
+	width:100%;
+}
+.mainpage-menu .row {
+	font-size: 14px;
+	margin: 0;
+	font-family: 'HelveticaNeue Medium';
+}
+.mainpage-menu .col-md-12 {
+	padding: 8.5px;
+}
+.mainpage-header .row>div {
+	padding: 0;
+	font-size: 16px;
+}
+.mainpage-menu .item-icon {
+	width: 24px;
+	height: 24px;
+}
+
+.mainpage-header .logo {
+	padding-left: 20%;
+	padding-right: 20%;
+	padding-bottom: 5px
+}
+
+.mainpage-menu .item-name {
+	line-height: 32px;
+	font-size: 16px;
+}
+.mainpage-menu .menu-item {
+	/*padding:15px ;*/
+	line-height: 32px;
+}
+
+
+
+
+	.slide {
+      position: absolute;
+      /*top: 15%;*/
+      width: 100%;
+    }
+    .slide div {
+      /*margin: 10px;*/
+    }
+    
+    .slide.ng-enter,
+    .slide.ng-leave {
+      transition: all 1s;
+      z-index: 1;
+    }
+    
+    .slide.ng-enter {
+      right: -100%;
+      opacity: 0;
+    }
+    .slide.ng-enter.ng-enter-active,
+    .slide.ng-leave {
+      right: 0;
+      opacity: 1;
+    }
+    .slide.ng-leave.ng-leave-active {
+      left: 100%;
+      opacity: 0;
+>>>>>>> Stashed changes
     }

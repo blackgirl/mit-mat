@@ -10,9 +10,9 @@
 }
 .inner-addon span {
     position: absolute;
-    padding: 10px 12px;
+    padding: 8px 12px;
     pointer-events: none;
-    color: grey;
+    color: rgb(196, 196, 196);
 }
 
 .right-inner-addon span {

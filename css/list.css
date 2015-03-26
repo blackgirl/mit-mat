@@ -1,11 +1,11 @@
 body, html {
 	height: 100%;
-    background: #8580c9;
+    background: #706ab1;
     overflow-y: auto;
 }
 
 .page-list {
-  background: #8580c9;
+  background: #706ab1;
   /*padding: 30px 0;*/
 }
 .list-item {
@@ -16,7 +16,11 @@ body, html {
 	font-size: 22px;
 	color: rgba(255,255,255,.7);
 }
+<<<<<<< Updated upstream
 .list-item-info {
+=======
+.list-item-info {
+>>>>>>> Stashed changes
     padding-left: 0px;
 	
 }

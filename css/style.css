@@ -45,8 +45,8 @@ body {
   overflow:hidden;
 }
 body, html {
-  height: 100%;
-    background: #8580c9;
+    height: 100%;
+    background: #706ab1;
     overflow-y: auto;
     position: relative;
 }
@@ -55,7 +55,8 @@ body, html {
   position: absolute;
   height: 100%;
   width:100%;
-  overflow: scroll;
+  overflow-x:hidden;
+  overflow-y: scroll;
 }
 
 .body-padding {
@@ -323,6 +324,9 @@ img.brand:hover  {
   line-height: 1;
   font-family: 'HelveticaNeue Light';
 }
+.navbar-left::selection, .navbar-right::selection {
+  color: #1284ff;
+}
 .navbar-left li {
   float: left;
 }
@@ -383,9 +387,9 @@ img.brand:hover  {
 }
 
 .mainpage-menu .col-md-12:hover, .f-nav-item .btn:hover, .f-nav-item.active .btn {
-  background: #8580c9;
-  background-color: #8580c9 !important;
-  border-color: #8580c9;
+  background: #706ab1;
+  background-color: #706ab1 !important;
+  border-color: #706ab1;
   cursor:pointer;
   color: rgba(255,255,255,.7);
 }
@@ -395,6 +399,7 @@ img.brand:hover  {
   height: 32px;
   background-size: cover !important;
   float:left;
+  top: 5px;
 }
 .item-icon.meat {
   background: url(../images/icons-cat/meat.png) no-repeat;

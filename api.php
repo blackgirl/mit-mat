@@ -9,9 +9,9 @@ function db_connect() {
     // Yeah, using deprecated API ...
     //  TODO: consider rewor
 	// Connecting, selecting database
-	$g_link = mysql_connect('127.0.0.1', 'root', '1')
+	$g_link = mysql_connect('localhost:3306', 'henrik', 'pGUCLCpIxD80YbrO9bZx')
 	    or die('Could not connect: ' . mysql_error());
-	
+
 	mysql_set_charset('utf8',$g_link);
 	mysql_select_db('henrik') or die('Could not select database');
 }
@@ -28,7 +28,7 @@ function db_fetch($query) {
 	$result =array();
 	$qresult = mysql_query($query) or die('Query failed: ' . mysql_error());
 
-	while ($line = mysql_fetch_assoc($qresult, MYSQL_ASSOC)) {
+	while ($line = mysql_fetch_assoc($qresult)) {
 		array_push($result, $line);
 	}	
 
@@ -211,7 +211,7 @@ function routeApiRequst() {
 }
 
 $result = routeApiRequst();
-$result = json_encode($result, JSON_UNESCAPED_UNICODE);
+$result = json_encode($result/*, JSON_UNESCAPED_UNICODE*/);
 print ($result);
 
 db_close();

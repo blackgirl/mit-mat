@@ -34,7 +34,12 @@
 	border-width: 0;
 	color: white;
 }
-
+.arrow-left.themify {
+	background: url(../images/arrow_left.png) no-repeat;
+	background-size: 100%;
+	width:18px;
+	height:18px;
+}
 /* Botstrap overwrite */
 .nav-tabs.nav-justified>.active>a,.nav-tabs.nav-justified>li>a, .nav-tabs.nav-justified>.active>a:focus, .nav-tabs.nav-justified>.active>a:hover {
 	border:none;
