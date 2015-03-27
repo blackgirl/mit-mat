@@ -55,6 +55,11 @@
   padding-top: 18px;
 }
 
+.form-control.ng-pristine {
+    border: 0px solid #706ab1; /*main color*/
+    background-color: #e2e0ee;
+}
+
 #tab1 .formula-title {
   margin: 20px 0px 10px 0px;
   font-size: 28px;
@@ -75,6 +80,7 @@
 
   section {
       padding: 66px 0;
+      padding-top:92px;
   }
   .visible-md {
     display: none;
@@ -89,6 +95,7 @@
 @media (min-width: 990px) {
   section {
       padding: 66px 0;
+      padding-top: 92px
   }
     .checkbox label {
       min-height: 32px; /* NP*/

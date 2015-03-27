@@ -5,9 +5,17 @@
 	/*padding-left: 15px;*/
 	/*padding-right: 15px;*/
 }
-.row.search-bar {
+.row.search-bar{
 	/*margin-top: 5%;*/
 	margin-bottom:5%;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+.row.search-bar>div {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+
 }
 .item {
 	text-align: center;
@@ -66,4 +74,9 @@
 	padding: 15px 60px;
 	text-align: left;
 	font-size: 18px;
+}
+
+#carousel-ingredients > .row > div{
+    padding-left: 0px;
+    padding-right: 0px;
 }
