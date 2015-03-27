@@ -20,6 +20,7 @@
     /* padding-left: 17%; */ /* NP */
     line-height: 24px;
     margin: 0 auto;
+    padding-left: 12px;
 }
 .carousel-content span {
     /*font-size: 24px;*/
@@ -34,6 +35,7 @@
 	width: 24px;
 	height: 24px;
 	display: inline-block;
+	top: 5px;
 }
 .item:not(.active){
     padding-top:15px;padding-bottom:15px;
@@ -44,6 +46,16 @@
     bottom: auto;
     margin-top: 8px; /* NP */
 }
+
+.carousel-control.left {
+    text-align: left;
+    margin-left: 60px;
+}
+.carousel-control.right {
+    text-align: right;
+    margin-right: 25px;
+}
+
 .carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right, .carousel-control .icon-next, .carousel-control .icon-prev {
 	top: 12px;
 }

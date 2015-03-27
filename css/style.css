@@ -403,7 +403,7 @@ img.brand:hover  {
   height: 32px;
   background-size: cover !important;
   float:left;
-  top: 5px;
+  /* top: 5px; */
 }
 .item-icon.meat {
   background: url(../images/icons-cat/meat.png) no-repeat;
@@ -425,7 +425,7 @@ img.brand:hover  {
 }
 
 .item-name {
-    padding-left: 15px;
+    padding-left: 5px;
     line-height: 1.6;
     float:left;
 }
