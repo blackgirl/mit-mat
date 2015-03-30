@@ -4,15 +4,27 @@
 :focus { outline-color: transparent!important; outline-style: none!important; }
 ::-webkit-scrollbar { display: none; }
 
+
+@font-face {
+  font-family: 'HelveticaNeue';
+  src: url('../Fonts/HelveticaNeue/HelveticaNeue.ttf') format('truetype'), /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3â€”5 */ 
+        url('../Fonts/HelveticaNeue/HelveticaNeue.otf') format('OpenType'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
 @font-face {
   font-family: 'HelveticaNeue Medium';
-  src: url('../Fonts/HelveticaNeue/helveticaneuecyr-medium.otf') format('OpenType'), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-       url('../Fonts/HelveticaNeue/HelveticaNeue-Medium.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3â€”5 */
+  src: url('../Fonts/HelveticaNeue/HelveticaNeue.ttf') format('truetype'), /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3â€”5 */ 
+        url('../Fonts/HelveticaNeue/HelveticaNeue.otf') format('OpenType'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+
+/*      url('../Fonts/HelveticaNeue/helveticaneuecyr-medium.otf') format('OpenType'), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+/*       url('../Fonts/HelveticaNeue/HelveticaNeue-Medium.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3â€”5 */
 }
 @font-face {
   font-family: 'HelveticaNeue Light';
-  src: url('../Fonts/HelveticaNeue/helveticaneuecyr-light.otf') format('OpenType'), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-       url('../Fonts/HelveticaNeue/HelveticaNeue-Light.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3â€”5 */
+  src: url('../Fonts/HelveticaNeue/HelveticaNeue.ttf') format('truetype'), /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3â€”5 */ 
+        url('../Fonts/HelveticaNeue/HelveticaNeue.otf') format('OpenType'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  /*
+      url('../Fonts/HelveticaNeue/helveticaneuecyr-light.otf') format('OpenType'), /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  /*     url('../Fonts/HelveticaNeue/HelveticaNeue-Light.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3â€”5 */
 }
 @font-face {
   font-family: 'themify';
@@ -22,6 +34,7 @@
         url("../Fonts/themify/themify.ttf") format("truetype"),
         url("../Fonts/themify/themify.svg#fontname") format("svg");
 }
+
 
 html {
   overflow-y:scroll;
@@ -34,7 +47,7 @@ body {
   margin: 0;
   padding: 0;                      
   /*font-family: "Open Sans", sans-serif;*/
-  font-family: 'HelveticaNeue Light', 'Myriad Pro', sans-serif;
+  font-family: 'HelveticaNeue', 'Helvetica', 'Myriad Pro', sans-serif; /* 'HelveticaNeue Light';, 'Myriad Pro', sans-serif;*/
   font-size: 13px;
   line-height: 20px;
   color: white;
