@@ -60,6 +60,13 @@ section.page-formula {
 	margin-bottom: 0;
 	border-bottom: 1px solid #7f79c8;
 }
+
+.tab-pane .list-group-item:hover,
+.tab-pane .list-group-item.primary-1 {
+  background-color: rgba(255,255,255,.5);
+  border: none;
+  font-size: 18px;
+}
 #tab1 .formula-title {
 	padding-left: 15px;
 	padding-right: 15px;

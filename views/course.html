@@ -36,8 +36,8 @@
 
 	      <div class="tab-pane" id="tab2">
 	        <ul class="list-group">
-	        	<li ng-repeat='detail in Course.Details' class="list-group-item">
-	        	{{detail.Quantity}}{{detail.MeasurementName}} {{detail.IngredientName}}
+	        	<li ng-repeat='detail in Course.Details | orderBy: "-PrimaryYesNo"' class="list-group-item primary-{{detail.PrimaryYesNo}}">
+	        	{{detail.Quantity?detail.Quantity:'1'}}{{detail.MeasurementName}} {{detail.IngredientName}}
 	        	</li>
 	        </ul>
 	      </div>
