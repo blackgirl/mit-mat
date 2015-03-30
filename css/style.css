@@ -2,7 +2,7 @@
 ::-moz-selection { background: #999; color: #fff; text-shadow: none; }
 ::selection { background: #999; color: #fff; text-shadow: none; }
 :focus { outline-color: transparent!important; outline-style: none!important; }
-/*::-webkit-scrollbar { display: none; }*/
+::-webkit-scrollbar { display: none; }
 
 @font-face {
   font-family: 'HelveticaNeue Medium';
@@ -22,7 +22,6 @@
         url("../Fonts/themify/themify.ttf") format("truetype"),
         url("../Fonts/themify/themify.svg#fontname") format("svg");
 }
-
 
 html {
 	overflow-y:scroll;
@@ -47,11 +46,7 @@ body {
 }
 body, html {
     height: 100%;
-    background-image: url(../images/bg-solid.png);
-    background-size: cover;
-    background-color: #706ab1;
-    background-repeat: no-repeat;
-    background-position: center center;
+    background: #817aca;
     overflow-y: auto;
     position: relative;
 }
@@ -358,9 +353,8 @@ img.brand:hover  {
 }
 /* main page */
 #Mainpage {
-  background:url('../images/bg1.png') no-repeat;
-  background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 59%,rgba(133,128,201,1) 100%),url('../images/bg1.png') no-repeat;
-  background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 59%,rgba(133,128,201,1) 100%),url('../images/bg1.png') no-repeat;
+  background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 45%,#817aca 85%, #817aca 100%),url('../images/bg1.png') no-repeat;
+  background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 45%,#817aca 85%, #817aca 100%),url('../images/bg1.png') no-repeat;
   background-size: cover;
   background-position: 0 0;
 }
@@ -368,12 +362,12 @@ img.brand:hover  {
   font-size: 18px;
   padding-bottom: 9px;
   padding-top: 69px;
-  /*margin: 60px 0;*/
   text-align: center;
   color: black;
+  /*margin: 60px 0;*/
 }
 .formulapage-header {
-   padding-top: 0px; 
+  padding-top: 0px; 
   margin: 30px 0;
 }
 .mainpage-header .logo {
@@ -393,9 +387,9 @@ img.brand:hover  {
 }
 
 .mainpage-menu .col-md-12:hover, .f-nav-item .btn:hover, .f-nav-item.active .btn {
-  background: #706ab1;
-  background-color: #706ab1 !important;
-  border-color: #706ab1;
+  background: #817aca;
+  background-color: #817aca !important;
+  border-color: #817aca;
   cursor:pointer;
   color: rgba(255,255,255,.7);
 }
@@ -405,7 +399,7 @@ img.brand:hover  {
   height: 32px;
   background-size: cover !important;
   float:left;
-  /* top: 5px; */
+  top: 5px;
 }
 .item-icon.meat {
   background: url(../images/icons-cat/meat.png) no-repeat;
@@ -427,7 +421,7 @@ img.brand:hover  {
 }
 
 .item-name {
-    padding-left: 5px;
+    padding-left: 15px;
     line-height: 1.6;
     float:left;
 }
@@ -449,13 +443,10 @@ footer {
   border: none;
   margin: 0;
   border-radius: 0;
-  padding-left: 0px;
-  padding-right: 0px;
   }
   .f-nav-item:not(:last-of-type) .btn {
     border-right: 1px solid rgba(255,255,255,.5);
 }
-
 .f-nav-item .glyphicon {
   font-size: 24px;
 }
@@ -463,6 +454,7 @@ footer {
   font-size: 14px;
   padding:0;
 }
+
 
 
 .glyphicon.arr-right {
@@ -486,19 +478,26 @@ footer {
   height:22px;
   top:5px;
 }
-/*
-.inner-addon span.glyphicon-search {
-    padding-left: 12px;
+
+.glyphicon.themify {
+  font-family: 'themify'; /* 'Glyphicons Halflings'*/
+ }
+
+.glyphicon.glyphicon-home.themify:before {
+  content: "\E69B";
+  font-family: 'themify';
 }
-.glyphicon-search:before {
-  background: url(../images/search-icon.png) no-repeat;
-  background-size: contain;
-  width: 19px;
-  height: 19px;
-  display: block;
-  content: " ";
+.glyphicon.glyphicon-pushpin.themify:before {
+  content: "\E6DE";
+  font-family: 'themify';
 }
-*/
+.glyphicon.glyphicon-list-alt.themify:before {
+  content: "\E6DC";
+}
+.glyphicon.glyphicon-cog.themify:before {
+  content: "\E60F";
+}
+
 
 /* Spacer classes */
 
@@ -585,27 +584,3 @@ footer {
 .spacer100 {
   height: 100px !important;
 }
-
-
-
-.glyphicon.themify {
-  font-family: 'themify'; /* 'Glyphicons Halflings'*/
- }
-
-
-.glyphicon.glyphicon-home.themify:before {
-  content: "\E69B";
-  font-family: 'themify';
-}
-.glyphicon.glyphicon-pushpin.themify:before {
-  content: "\E6DE";
-  font-family: 'themify';
-}
-.glyphicon.glyphicon-list-alt.themify:before {
-  content: "\E6DC";
-}
-.glyphicon.glyphicon-cog.themify:before {
-  content: "\E60F";
-}
-
-
