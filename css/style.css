@@ -49,7 +49,7 @@ body, html {
     background: #817aca;
     background-image: url(../images/bg-solid.png);
     background-size: cover;
-    background-color: #706ab1;
+    background-color: #817aca;
     background-repeat: no-repeat;
     background-position: center center;
     overflow-y: auto;
@@ -366,7 +366,9 @@ img.brand:hover  {
   background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 45%,#817aca 85%, #817aca 100%),url('../images/bg1.png') no-repeat;
   background-size: cover;
   background-position: 0 0;
+  height:100%;
 }
+
 .mainpage-header, .formulapage-header {
   font-size: 18px;
   padding-bottom: 9px;
