@@ -67,7 +67,7 @@
 }
 .carousel-control.right {
     text-align: right;
-    margin-right: 25px;
+    padding-right: 25px;
 }
 
 .carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right, .carousel-control .icon-next, .carousel-control .icon-prev {

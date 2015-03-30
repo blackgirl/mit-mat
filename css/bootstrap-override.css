@@ -43,7 +43,7 @@
     font-size: 24px;
 }
 .carousel-control.left {
-  margin-left: 60px;
+  padding-left: 60px;
 }
 
   .checkbox label {
@@ -361,7 +361,7 @@
     font-family: 'HelveticaNeue Medium';
   }
   .carousel-control.left {
-    margin-left: 45px;
+    padding-left: 45px;
   }
   .checkbox {
     background: rgba(255,255,255,.13);
