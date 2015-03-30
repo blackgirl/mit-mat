@@ -449,6 +449,8 @@ footer {
 .f-nav .btn {
   color: white;
   background: black;
+  padding-left: 0;
+  padding-right: 0;
 }
 .f-nav-item,.f-nav-item .btn {
   border: none;
