@@ -47,6 +47,11 @@ body {
 body, html {
     height: 100%;
     background: #817aca;
+    background-image: url(../images/bg-solid.png);
+    background-size: cover;
+    background-color: #706ab1;
+    background-repeat: no-repeat;
+    background-position: center center;
     overflow-y: auto;
     position: relative;
 }
