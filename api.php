@@ -108,7 +108,7 @@ function db_getCourseByIngridients($ingredientIds) {
 	$inStatement= implode(', ', $inStatement);
 
 	// fetch courses 
-	$courses = db_fetch(sprintf('SELECT c.* 
+	$courses = db_fetch(sprintf('SELECT distinct c.* 
 	FROM coursemain c 
 	inner join coursedetail d on c.CourseID = d.CourseID 
 	where d.IngredientID in (%s)', $inStatement));
@@ -124,7 +124,7 @@ function db_getCourseByIngridients($ingredientIds) {
 		inner join ingredients i on d.IngredientID = i.IngredientID 
 		inner join categories c on d.CategoryID = c.CategoryID 
 		left join measurements m on i.MeasurementID = m.MeasurementID
-		where d.IngredientID in (%s)', $inStatement));
+		where d.CourseID in (select distinct df.CourseID from coursedetail df where df.IngredientID in (%s) )', $inStatement));
 
 	foreach($courses as $i => $v) {
 		$courses[$i]['Details'] = array();	
