@@ -64,7 +64,7 @@ section.page-formula {
 .tab-pane .list-group-item:hover,
 .tab-pane .list-group-item.primary-1 {
   background-color: rgba(255,255,255,.5);
-  border: none;
+  /* border: none; */
   font-size: 18px;
 }
 #tab1 .formula-title {
