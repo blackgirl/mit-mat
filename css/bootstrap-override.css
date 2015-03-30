@@ -1,4 +1,4 @@
-.navbar-nav>li>a, .center-block a {
+/*.navbar-nav>li>a,*/ .center-block a {
   color: white !important;
 }
   .navbar-left>li>a, .navbar-right>li>a {
@@ -91,7 +91,12 @@
 /* 1200 */
 
 @media (min-width: 1200px) {
-
+  .navbar-nav>li>a {
+    line-height: 2;
+  }
+  .center-block>li>a {
+    line-height: 1
+  }
 }
 
 /* 990 */
@@ -296,7 +301,8 @@
 
   /* Search page */
   .form-control.ng-pristine {
-    border: 0px solid #817aca; /*main color*/
+    border: 0px solid #706ab1; /*main color*/
+    background-color: #e2e0ee;
     padding-left: 25px;
     font-size: 14px;
     padding-top: 8px;
