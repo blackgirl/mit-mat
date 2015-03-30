@@ -150,7 +150,7 @@ function db_getLastUsedCourses() {
 	// fetch courses 
 	$courses = db_fetch('SELECT c.* 
 		FROM coursemain c 
-		inner join (SELECT CourseID, count(*) as rating FROM courseusage Group by CourseID ) r on c.CourseID = r.CourseID 
+		inner join (SELECT CourseID, max(TimeStampUsed) as rating FROM courseusage Group by CourseID ) r on c.CourseID = r.CourseID 
 		order by rating desc 
 		limit 12');
 
@@ -162,7 +162,7 @@ function db_getLastUsedCourses() {
 		c.Name as CategoryName,
 		c.Icon as CategoryIcon
 		FROM coursedetail d 
-		inner join (SELECT CourseID, count(*) rating FROM `courseusage` Group by CourseID ) r on d.CourseID = r.CourseID 
+		inner join (SELECT CourseID, max(TimeStampUsed) as rating FROM `courseusage` Group by CourseID ) r on d.CourseID = r.CourseID 
 		inner join ingredients i on d.IngredientID = i.IngredientID 
 		inner join categories c on d.CategoryID = c.CategoryID 
 		left join measurements m on i.MeasurementID = m.MeasurementID
@@ -211,7 +211,7 @@ function routeApiRequst() {
 }
 
 $result = routeApiRequst();
-$result = json_encode($result/*, JSON_UNESCAPED_UNICODE*/);
+$result = json_encode($result);
 print ($result);
 
 db_close();
