@@ -17,6 +17,11 @@
     padding-top: 5px;
 
 }
+.form-control.ng-pristine {
+    border: 0px solid #706ab1; /*main color*/
+    background-color: #e2e0ee;
+}
+
 .item {
 	text-align: center;
 }
