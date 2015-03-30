@@ -1,10 +1,9 @@
-/*.navbar-nav>li>a,*/ .center-block a {
+.navbar-nav>li>a, .center-block a {
   color: white !important;
 }
-.navbar-nav.navbar-left>li>a, .navbar-nav.navbar-right >li>a {
-  color: #1284FF;
-}
-
+  .navbar-left>li>a, .navbar-right>li>a {
+    color: #1284ff !important;
+  }
 .nav>li>a {
   padding: 10px;
 }
@@ -78,11 +77,6 @@
     padding-top: 18px;
   }
 
-.form-control.ng-pristine {
-    border: 0px solid #706ab1; /*main color*/
-    background-color: #e2e0ee;
-}
-
 #tab1 .formula-title {
   margin: 20px 0px 10px 0px;
   font-size: 28px;
@@ -106,7 +100,6 @@
 
   section {
       padding: 66px 0;
-      padding-top:92px;
   }
   .visible-md {
     display: none;
@@ -232,6 +225,9 @@
   .navbar-left, .navbar-right, .center-block {
     font-size: 24px;
   }
+  .navbar-nav.navbar-right>li>a {
+    line-height: 32px;
+  }
   .center-block {
     margin: 0;
     margin-bottom: 7.5px;
@@ -306,7 +302,7 @@
     padding-top: 8px;
     line-height: 1.3;
     height:auto;
-    background-color: #e2e0ee;
+    background-color: #e2e0ee
     border-radius: 6px;
   }
   .f-nav-name.col-xs-12 {
