@@ -77,6 +77,10 @@
     padding-top: 18px;
   }
 
+  #my-ingredients .item label {
+      padding: 1px 0;
+  }
+
 #tab1 .formula-title {
   margin: 20px 0px 10px 0px;
   font-size: 28px;
@@ -87,16 +91,6 @@
 }
 #tab2 {
   padding: 30px 0;
-}
-/* 1200 */
-
-@media (min-width: 1200px) {
-  .navbar-nav>li>a {
-    line-height: 2;
-  }
-  .center-block>li>a {
-    line-height: 1
-  }
 }
 
 /* 990 */
@@ -130,7 +124,7 @@
   }
 }
 
-
+/* Over 990px */
 @media (min-width: 990px) {
 
   section {
@@ -156,7 +150,9 @@
     font-size: 22px;
     color: rgba(255,255,255,.7);
   }
-
+  #my-ingredients .item label {
+      padding: 5px 0;
+  }
 } 
 
 /* 768 */
@@ -480,4 +476,80 @@
 @media (max-width: 360px) {
 
 
+}
+
+/* 1200 */
+
+@media only screen and (min-width: 1200px) {
+  
+  .navbar-nav>li>a {
+    line-height: 2;
+  }
+  .glyphicon.back-icon-left {
+    width:24px;
+    height:32px;
+  }
+  .center-block>li>a {
+    line-height: 1
+  }
+  .row.search-bar>div {
+    padding:0;
+    padding-right: 25px;
+  }
+  .inner-addon input {
+    font-size: 18px;
+  }
+  section {
+    padding: 126px 0;
+  }
+  .mainpage-menu {
+    padding: 0;
+    padding-bottom: 85px;
+  }
+  .form-control {
+    height: 34px;
+  }
+  .carousel-content {
+    margin-bottom: 35px;
+  }
+  .carousel-content .item-icon.category-icon {
+    width: 34px;
+    height: 34px;
+  }
+  .glyphicon.arr-right {
+    right: 100%;
+  }
+  .glyphicon.arr-left {
+    left: 100%;
+  }
+  .arr-right, .arr-left {
+    width: 24px;
+    height: 24px;
+  }
+  .to-r.course-arr {
+    right: 0;
+  }
+  .course-thumb {
+    min-height: 120px;
+  }
+  .list-item-text {
+    padding-top: 25px;
+  }
+  .list-item-info p {
+    font-size: 14px;
+  }
+  .list-item-text .title {
+    font-size:24px
+  }
+  .no-items {
+    font-size: 14px;
+  }
+  #my-ingredients .item label {
+      padding: 5px 0;
+  }
+  #btnClearAll {
+    padding: 12px;
+    margin-bottom: 0;
+    font-size: 16px;
+  }
 }
