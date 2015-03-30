@@ -6,13 +6,23 @@
 .inner-addon input {
     padding-left: 35px;
     font-size: 16px;
-    padding-top: 10px;  
+    padding-top: 10px;
+    color: #999; 
 }
 .inner-addon span {
     position: absolute;
-    padding: 8px 12px;
+    /*padding: 8px 12px;*/
     pointer-events: none;
     color: rgb(196, 196, 196);
+}
+.icon-search:before {
+    content:"";
+}
+.icon-search {
+    background: url(search-icon.png) no-repeat;
+    background-size: contain;
+    top: 8px;
+    /*left: 7px;*/
 }
 
 .right-inner-addon span {

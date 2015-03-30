@@ -2,6 +2,7 @@
 ::-moz-selection { background: #999; color: #fff; text-shadow: none; }
 ::selection { background: #999; color: #fff; text-shadow: none; }
 :focus { outline-color: transparent!important; outline-style: none!important; }
+/*::-webkit-scrollbar { display: none; }*/
 
 @font-face {
   font-family: 'HelveticaNeue Medium';

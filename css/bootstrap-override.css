@@ -1,7 +1,6 @@
-.center-block a {
+/*.navbar-nav>li>a,*/ .center-block a {
   color: white !important;
 }
-
 .navbar-nav.navbar-left>li>a, .navbar-nav.navbar-right >li>a {
   color: #1284FF;
 }
@@ -9,6 +8,7 @@
 .nav>li>a {
   padding: 10px;
 }
+
 .list-group-item {
   background-color: rgba(255,255,255,.25);
   border: none;
@@ -18,8 +18,8 @@
 .list-group-item:hover {
   background-color: rgba(255,255,255,.5);
   border: none;
-  font-family: 'HelveticaNeue Medium';
   font-size: 18px;
+  /*font-family: 'HelveticaNeue Medium';*/
 }
 .list-group-item:first-child {
   border-top-left-radius: 0px;
@@ -30,17 +30,28 @@
   position: absolute;
 }
 
+.icon-search {
+  left: 10px;
+}
+  .inner-addon span {
+    padding: 8px 12px;
+  }
+
 .carousel-inner {
-  margin-bottom: 55px;
+  margin-bottom: 65px;
 }
 .carousel-content span {
     font-size: 24px;
+}
+.carousel-control.left {
+  margin-left: 60px;
 }
 
   .checkbox label {
     min-height: 24px; /* NP*/
     line-height: 24px;
     font-size: 16px;
+    padding-left: 20px;
   }
   .checkbox label::before, .checkbox label::after {
     width: 24px;
@@ -51,9 +62,21 @@
   width:18px;
   height:18px;
 }
-.list-item-text a {
-  padding-top: 18px;
+
+.list-item {
+  border-bottom: 2px solid rgba(117, 113, 177, 1);
 }
+.list-item-img {
+  padding: 0 15px; 
+}
+.list-item-text {
+  padding-top: 15px;
+  padding-right:30px;
+  padding-left:0px;
+}
+  .list-item-text a {
+    padding-top: 18px;
+  }
 
 .form-control.ng-pristine {
     border: 0px solid #706ab1; /*main color*/
@@ -67,6 +90,9 @@
 #tab1 .formula-description {
   margin: 20px 0px 10px 0px;
   font-size: 18px;
+}
+#tab2 {
+  padding: 30px 0;
 }
 /* 1200 */
 
@@ -91,11 +117,26 @@
   .list-item-text {
     padding-top: 30px;
   }
+  .item .btn {
+    padding: 3px 15px;
+    width:auto !important;
+    font-size: 12px;
+  }
+  .item .btn {
+    width: auto;
+  }
+  #my-ingredients .item .btnDelete {
+    padding: 3px 15px;
+    width:auto !important;
+    font-size: 12px;
+  }
 }
+
+
 @media (min-width: 990px) {
+
   section {
       padding: 66px 0;
-      padding-top: 92px
   }
     .checkbox label {
       min-height: 32px; /* NP*/
@@ -122,9 +163,17 @@
 
 /* 768 */
 
+@media (min-width: 768px) {
+  .navbar-header.center-block {
+    margin-bottom:  0;
+  }
+}
 @media (max-width: 768px) {
   section {
-    padding: 55px 0;
+    padding: 65px 0;
+  }
+  .mainpage-menu {
+    padding-top: 0;
   }
   .navbar-left,.navbar-header, .navbar-right {
     float: left !important;
@@ -163,7 +212,7 @@
     color: #1284ff !important;
   }
   .formulapage-header {
-    margin-top: 0;
+    margin-top: 50px;
   }
 
   .navbar-header.center-block {
@@ -178,9 +227,35 @@
 
 }
 
+
+@media screen and (min-width: 481px) and (max-width: 900px) and (orientation: landscape) {
+  .navbar-left, .navbar-right, .center-block {
+    font-size: 24px;
+  }
+  .center-block {
+    margin: 0;
+    margin-bottom: 7.5px;
+  }
+  .mainpage-menu {
+    padding-top: 0;
+    padding-bottom: 85px;
+  }
+  .page-list {
+    padding: 85px 0;
+  }
+}
+.formula-img .nav-tabs.nav-justified>li {
+    width:50%;
+    float:left !important;
+  }
+  .formula-img .nav-tabs.nav-justified>li>a {
+    margin:0 !important;
+    line-height: 1;
+  }
+
 /* 480 */
 
-@media (max-width: 480px) {
+@media (max-width: 480px), (max-width: 624px) and (orientation: landscape) {
   section {
     padding: 55px 0 66px;
     height: auto;
@@ -211,6 +286,9 @@
     font-size: 18px;
     line-height: 32px;
   }
+  .mainpage-header {
+    font-size: 15px;
+  }
   .mainpage-header, .center-block {
     margin-top: 0;
   }
@@ -219,12 +297,14 @@
     left: 0;
   }
 
+
+  /* Search page */
   .form-control.ng-pristine {
-    border: 0px solid #706ab1; /*main color*/
-    padding-left: 30px;
+    border: 0px solid #817aca; /*main color*/
+    padding-left: 25px;
     font-size: 14px;
-    padding-top: 10px; 
-    line-height: 1;
+    padding-top: 8px;
+    line-height: 1.3;
     height:auto;
     background-color: #e2e0ee;
     border-radius: 6px;
@@ -256,16 +336,56 @@
     font-size: 18px;
     font-family: 'HelveticaNeue Medium';
   }
+  .carousel-control.left {
+    margin-left: 45px;
+  }
+  .checkbox {
+    background: rgba(255,255,255,.13);
+    margin-bottom: 6px;
+  }
+  .checkbox label {
+    padding-left: 20px;
+    font-size: 15px;
+    font-family: 'HelveticaNeue Medium',serif;
+  }
+  .form-control {
+    background-color: rgba(255,255,255,.75);
+    color: #ccc;
+    height: auto;
+    padding: 7px 8px 3px;
+    font-size: 14px;
+    line-height: 1.3;
+  }
+  .inner-addon input {
+    padding-left: 25px;
+    font-size: 14px;
+    color: #999;
+    padding-top: 8px;
+  }
+  .row.search-bar {
+    margin-bottom:10px;
+  }
+  .icon-search {
+    left: 7px;
+  }
+  .inner-addon span {
+    padding: 6px 10px;
+  }
+  .arr-right, .arr-left {
+    width: 14px;
+    height: 14px;
+  }
+
 
   /* Formula Page */
   #tab1 .formula-title {
-    /*margin: 20px 0px 30px 0px;*/
-    /*font-size: 28px;*/
     margin: 0px;
     margin-top: 15px;
     font-size: 18px;
     padding-left: 15px;
     font-family: 'HelveticaNeue Medium';
+    /*margin: 20px 0px 30px 0px;*/
+    /*font-size: 28px;*/
   }
   .formulapage-header {
     font-size: 14px;
@@ -277,10 +397,13 @@
     margin-bottom: 20px;
   }
   #tab1 .formula-description {
-    /*-webkit-padding-start: 0px;*/
     font-size: 12px;
     margin: 0px;
     line-height: 1.2;
+  }
+
+  #tab2 {
+    padding: 15px 0;
   }
   .tab-pane .list-group-item {
     padding-top: 5px !important;
@@ -298,55 +421,56 @@
   }
   .formula-img li>a {
     margin:0 !important;
+    line-height: 1;
   }
   .tab-pane {
     padding-top: 0;
   }
-  .item .btn {
+  .item .btn, #my-ingredients .item .btnDelete {
     padding: 3px 15px;
     width:auto !important;
     font-size: 11px;
   }
+
+  /* Ingridients list */
   #my-ingredients .item label{
     font-size: 11px;
   }
-
+  .list-item {
+    border-bottom: 1px solid #817aca;
+  }
   .list-item-info p {
     color: #3c3a43;
   }
   .list-item-info p:not(.title) {
     font-size: 10px;
-    /* padding-top:5px; */
-    /* line-height: 1em; */
-  
-    max-height: 2em;
-}
+    line-height:10px;
+    /*padding-top:5px;*/
+  }
   .list-item-info .title a {
     line-height: 1 !important;
-    font-size: 14px;
+    font-size: 13px;
   }
   .list-item .glyphicon, .glyphicon-chevron-right {
     font-size: 16px;
     color: rgba(255,255,255,.5);
   }
   .list-item-text {
-    padding-top:20px;
+    padding-top: 15px;
+    padding-right: 10px;
   }
-  .list-item-text a {
-    padding: 10px 0;
-  }
-  .arr-right, .arr-left {
-    width:14px;
-    height:14px;
+    .list-item-text a {
+      padding: 10px 0;
+    }
+
+  .list-item-img {
+    padding-left: 0;
   }
 
   .course-thumb {
     min-height: 70px;
   }
-  .list-item-text {
-    padding-top: 20px;
-    padding-right: 10px !important;
-  }
+
 }
 
 /* 360 */
