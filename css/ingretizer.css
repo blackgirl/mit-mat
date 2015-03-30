@@ -48,7 +48,7 @@
 	width: 24px;
 	height: 24px;
 	display: inline-block;
-	top: 5px;
+	top: 3px;
 }
 .item:not(.active) {
     padding-top:15px;
