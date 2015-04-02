@@ -423,7 +423,7 @@ img.brand:hover  {
   height: 32px;
   background-size: cover !important;
   float:left;
-  top: 0px;
+  top: 4px;
 }
 .item-icon.meat {
   background: url(../images/icons-cat/meat.png) no-repeat;
