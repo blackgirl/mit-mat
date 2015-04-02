@@ -15,7 +15,6 @@ function db_connect() {
 	mysql_set_charset('utf8',$g_link);
 	mysql_select_db('henrik') or die('Could not select database');
 }
-
 function db_close() {
     global $g_link;
     if( $g_link != false )
@@ -81,7 +80,7 @@ function db_getCourseById($id) {
 		$courses[$i]['Details'] = array();	
 		$courses[$i]['PrimaryIngredients'] = array();
 
-		db_exec(sprintf('insert into courseusage (CourseID) values(%d)', $v['CourseID']));
+		db_exec(sprintf("insert into courseusage (CourseID, SessionId) values(%d, '%s')", $v['CourseID'], session_id()));
 	}
 
 	foreach($details as $i => $v ){ 
@@ -148,11 +147,11 @@ function db_getCourseByIngridients($ingredientIds) {
 function db_getLastUsedCourses() {
 
 	// fetch courses 
-	$courses = db_fetch('SELECT c.* 
+	$courses = db_fetch(sprintf("SELECT c.* 
 		FROM coursemain c 
-		inner join (SELECT CourseID, max(TimeStampUsed) as rating FROM courseusage Group by CourseID ) r on c.CourseID = r.CourseID 
+		inner join (SELECT CourseID, max(TimeStampUsed) as rating FROM courseusage where SessionId ='%s' Group by CourseID ) r on c.CourseID = r.CourseID 
 		order by rating desc 
-		limit 12');
+		limit 12", session_id()));
 
 	// fetch details
 	$details = db_fetch('SELECT d.*,
@@ -209,6 +208,7 @@ function routeApiRequst() {
 			break;
 	}
 }
+session_start();
 
 $result = routeApiRequst();
 $result = json_encode($result);
