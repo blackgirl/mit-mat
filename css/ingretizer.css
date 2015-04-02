@@ -41,14 +41,16 @@
     color: white;
     white-space: nowrap;
     line-height: 32px;
+    display: inline-block;
 }
 .carousel-content .item-icon.category-icon /*,
 .item-icon.carrot, .item-icon.meat, .item-icon.fish, .item-icon.apple, .item-icon.bread, .item-icon.milk*/ {
-	float: none;
-	width: 24px;
-	height: 24px;
-	display: inline-block;
-	top: 3px;
+    float: none;
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    top: 3px;
+    vertical-align: top;
 }
 .item:not(.active) {
     /*padding-top:15px;*/
