@@ -76,7 +76,9 @@
   .list-item-text a {
     padding-top: 18px;
   }
-
+.list-item-info p:not(.title) {
+    line-height:1.1;
+  }
   #my-ingredients .item label {
       padding: 1px 0;
   }
@@ -478,7 +480,7 @@
   }
   .list-item-info p:not(.title) {
     font-size: 10px;
-    line-height:10px;
+    line-height:1.1;
     /*padding-top:5px;*/
   }
   .list-item-info .title a {
