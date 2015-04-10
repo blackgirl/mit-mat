@@ -109,8 +109,11 @@ function db_getCourseByIngridients($ingredientIds) {
 	// fetch courses 
 	$courses = db_fetch(sprintf('SELECT distinct c.* 
 	FROM coursemain c 
-	inner join coursedetail d on c.CourseID = d.CourseID 
-	where d.IngredientID in (%s)', $inStatement));
+	where not c.CourseID in (
+			select distinct df.CourseID 
+			from coursedetail df 
+			where df.PrimaryYesNo = 1 and not df.IngredientID in (%s) 
+		)', $inStatement));
 
 	// fetch details
 	$details = db_fetch(sprintf('SELECT d.*,
@@ -123,7 +126,11 @@ function db_getCourseByIngridients($ingredientIds) {
 		inner join ingredients i on d.IngredientID = i.IngredientID 
 		inner join categories c on d.CategoryID = c.CategoryID 
 		left join measurements m on i.MeasurementID = m.MeasurementID
-		where d.CourseID in (select distinct df.CourseID from coursedetail df where df.IngredientID in (%s) )', $inStatement));
+		where not d.CourseID in (
+			select distinct df.CourseID 
+			from coursedetail df 
+			where df.PrimaryYesNo = 1 and not df.IngredientID in (%s) 
+		)', $inStatement));
 
 	foreach($courses as $i => $v) {
 		$courses[$i]['Details'] = array();	
