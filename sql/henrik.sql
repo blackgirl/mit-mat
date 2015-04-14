@@ -1,40 +1,17 @@
--- phpMyAdmin SQL Dump
--- version 4.2.11
--- http://www.phpmyadmin.net
---
--- Хост: 127.0.0.1
--- Время создания: Мар 21 2015 г., 22:48
--- Версия сервера: 5.6.21
--- Версия PHP: 5.6.3
-
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
-
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8 */;
 
---
--- База данных: `henrik`
---
-
--- --------------------------------------------------------
-
---
--- Структура таблицы `categories`
---
 
 CREATE TABLE IF NOT EXISTS `categories` (
   `CategoryID` int(11) NOT NULL,
   `Name` varchar(250) NOT NULL,
   `Icon` varchar(250) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Дамп данных таблицы `categories`
---
 
 INSERT INTO `categories` (`CategoryID`, `Name`, `Icon`) VALUES
 (1, 'Drikke', 'drink.png'),
@@ -47,12 +24,6 @@ INSERT INTO `categories` (`CategoryID`, `Name`, `Icon`) VALUES
 (8, 'Tørrprodukter', 'dry.png'),
 (9, 'Diverse', 'other.png');
 
--- --------------------------------------------------------
-
---
--- Структура таблицы `coursedetail`
---
-
 CREATE TABLE IF NOT EXISTS `coursedetail` (
   `RecordID` int(11) NOT NULL,
   `CourseID` int(11) NOT NULL,
@@ -61,10 +32,6 @@ CREATE TABLE IF NOT EXISTS `coursedetail` (
   `PrimaryYesNo` int(11) NOT NULL,
   `Quantity` varchar(250) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Дамп данных таблицы `coursedetail`
---
 
 INSERT INTO `coursedetail` (`RecordID`, `CourseID`, `IngredientID`, `CategoryID`, `PrimaryYesNo`, `Quantity`) VALUES
 (1, 1, 15, 7, 1, '3'),
@@ -279,12 +246,6 @@ INSERT INTO `coursedetail` (`RecordID`, `CourseID`, `IngredientID`, `CategoryID`
 (210, 31, 76, 8, 0, NULL),
 (211, 31, 52, 7, 1, NULL);
 
--- --------------------------------------------------------
-
---
--- Структура таблицы `coursemain`
---
-
 CREATE TABLE IF NOT EXISTS `coursemain` (
   `CourseID` int(11) NOT NULL,
   `Name` varchar(250) DEFAULT NULL,
@@ -297,10 +258,6 @@ CREATE TABLE IF NOT EXISTS `coursemain` (
   `ImgThumb` varchar(250) DEFAULT NULL,
   `Description` text
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Дамп данных таблицы `coursemain`
---
 
 INSERT INTO `coursemain` (`CourseID`, `Name`, `LongName`, `ImgPath`, `ImgOrg`, `ImgLarge`, `ImgMedium`, `ImgSmall`, `ImgThumb`, `Description`) VALUES
 (1, 'Omelett', 'Omelett med ost og skinke', 'images/', 'dummyImg.png', 'dummyImg_L.png', 'dummyImg_M.png', 'dummyImg_S.png', 'dummyImg_thumb.png', '100g skinke, gjerne krydret\r\n1 potet\r\n10 cm purre\r\n3 egg\r\n3 ss melk\r\nEn klype salt\r\nLitt revet ost\r\nEventuelt litt pesto\r\n\r\nGjerne en frisk salat og/eller brød som tilbehør\r\n\r\nSlik gjør du\r\n\r\n1.Kutt poteter og skinke i terninger. Stek potetterningene på middels varme i litt olje i ca 5 minutter. Tilsett skinken, og stek videre i 2 minutter.\r\n2.Kutt purren og tilsett i pannen.\r\n3.Pisk sammen egg, melk og salt. Hell blandingen over i pannen og skru ned til svak varme. Ha over litt revet ost.\r\n4.Omeletten stekes på svak varme til den har satt seg – ca 12 minutter. Legg eventuelt litt grønn pesto på omeletten før servering.\r\n5.Server gjerne sammen med en fisk salat og brød.\r\n\r\nTips\r\n\r\nDersom du har en panne med stålhåndtak kan du steke omeletten i ovnen på 200C i ca 10 minutter. Da blir omeletten mer luftig.\r\n'),
@@ -335,11 +292,11 @@ INSERT INTO `coursemain` (`CourseID`, `Name`, `LongName`, `ImgPath`, `ImgOrg`, `
 (30, 'spekeskinketortilla', NULL, 'images/', 'dummyImg.png', 'dummyImg_L.png', 'dummyImg_M.png', 'dummyImg_S.png', 'dummyImg_thumb.png', 'Skjær 6 kokte poteter og 2 løk i skvier. Visp 4 egg og 1 dl melk og krydre med salt og pepepr. Fres 1 ss smø i pannen og legg i poteter og løk. Stek på middels varme til løken er myk. Slå eggene over potetene og løft forsiktig slik at eggene fordeles mellom potetskivene. Stek på svak varme til eggeblandningen har stivnet. Skjær en 1/2 purre i ringer og legg på tortilaen sammen med spekeskinke. server med brød.'),
 (31, 'havrepannekaker', 'god frokost eller lunsj', 'images/', 'dummyImg.png', 'dummyImg_L.png', 'dummyImg_M.png', 'dummyImg_S.png', 'dummyImg_thumb.png', 'bland 3 desiliter havre med tre normalt store egg, ha oppi 1 desiliter melk ig rør sammen. tisett en halv ts salt. Stek med smør. Stek til gyllenbrun farge.');
 
--- --------------------------------------------------------
-
---
--- Структура таблицы `ingredients`
---
+CREATE TABLE IF NOT EXISTS `courseusage` (
+  `CourseID` int(11) NOT NULL,
+  `TimeStampUsed` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `SessionId` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 CREATE TABLE IF NOT EXISTS `ingredients` (
   `IngredientID` int(11) NOT NULL,
@@ -347,10 +304,6 @@ CREATE TABLE IF NOT EXISTS `ingredients` (
   `CategoryID` int(11) NOT NULL,
   `MeasurementID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Дамп данных таблицы `ingredients`
---
 
 INSERT INTO `ingredients` (`IngredientID`, `Name`, `CategoryID`, `MeasurementID`) VALUES
 (1, 'agurk', 4, 1),
@@ -451,20 +404,10 @@ INSERT INTO `ingredients` (`IngredientID`, `Name`, `CategoryID`, `MeasurementID`
 (96, 'wokgrønnsaker', 4, 3),
 (97, 'wraps ', 6, 6);
 
--- --------------------------------------------------------
-
---
--- Структура таблицы `measurements`
---
-
 CREATE TABLE IF NOT EXISTS `measurements` (
   `MeasurementID` int(11) NOT NULL,
   `Name` varchar(24) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Дамп данных таблицы `measurements`
---
 
 INSERT INTO `measurements` (`MeasurementID`, `Name`) VALUES
 (1, 'cm'),
@@ -475,31 +418,16 @@ INSERT INTO `measurements` (`MeasurementID`, `Name`) VALUES
 (6, 'stk'),
 (7, 'teskje');
 
---
--- Индексы сохранённых таблиц
---
 
---
--- Индексы таблицы `categories`
---
 ALTER TABLE `categories`
  ADD PRIMARY KEY (`CategoryID`);
 
---
--- Индексы таблицы `coursemain`
---
 ALTER TABLE `coursemain`
  ADD PRIMARY KEY (`CourseID`);
 
---
--- Индексы таблицы `ingredients`
---
 ALTER TABLE `ingredients`
  ADD PRIMARY KEY (`IngredientID`);
 
---
--- Индексы таблицы `measurements`
---
 ALTER TABLE `measurements`
  ADD PRIMARY KEY (`MeasurementID`);
 

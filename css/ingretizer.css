@@ -21,7 +21,11 @@
     border: 0px solid #706ab1; /*main color*/
     background-color: #e2e0ee;
 }
-
+@media (max-width: 480px), (max-width: 768px) and (orientation: landscape){}
+    .form-control.ng-pristine {
+        font-size: 16px;
+    }
+}
 .item {
 	text-align: center;
 }
@@ -45,11 +49,11 @@
 }
 .carousel-content .item-icon.category-icon /*,
 .item-icon.carrot, .item-icon.meat, .item-icon.fish, .item-icon.apple, .item-icon.bread, .item-icon.milk*/ {
-    float: none;
-    width: 24px;
-    height: 24px;
-    display: inline-block;
-    top: 3px;
+	float: none;
+	width: 24px;
+	height: 24px;
+	display: inline-block;
+	top: 3px;
     vertical-align: top;
 }
 .item:not(.active) {

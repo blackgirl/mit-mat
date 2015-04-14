@@ -330,7 +330,6 @@
     background-color: #e2e0ee;
     padding-left: 25px;
     font-size: 14px;
-    /*padding-top: 8px;*/
     padding-top: 5px;
     padding-bottom: 5px;
     line-height: 1.3;
@@ -340,7 +339,6 @@
   .form-control.ng-dirty {
     padding-left: 25px;
     font-size: 14px;
-    /*padding-top: 8px;*/
     padding-top: 5px;
     padding-bottom: 5px;
     line-height: 1.3;
@@ -492,7 +490,7 @@
     color: rgba(255,255,255,.5);
   }
   .list-item-text {
-    padding-top: 15px;
+    padding-top: 10px;
     padding-right: 10px;
   }
     .list-item-text a {
